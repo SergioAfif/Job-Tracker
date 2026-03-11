@@ -25,6 +25,12 @@ import {
 } from "@/components/ui/select";
 import { Loader2 } from "lucide-react";
 
+const INTEREST_LEVEL_LABELS: Record<string, string> = {
+  High: "🔥 High",
+  Medium: "👍 Medium",
+  Low: "❓ Low",
+};
+
 interface EditProspectFormProps {
   prospect: Prospect;
   onSuccess?: () => void;
@@ -150,7 +156,7 @@ export function EditProspectForm({ prospect, onSuccess }: EditProspectFormProps)
                   <SelectContent>
                     {INTEREST_LEVELS.map((level) => (
                       <SelectItem key={level} value={level} data-testid={`option-edit-interest-${level}`}>
-                        {level}
+                        {INTEREST_LEVEL_LABELS[level] ?? level}
                       </SelectItem>
                     ))}
                   </SelectContent>

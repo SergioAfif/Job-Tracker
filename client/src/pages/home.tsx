@@ -56,7 +56,7 @@ function KanbanColumn({
   const visibleProspects =
     interestFilter === "All"
       ? prospects
-      : prospects.filter((p) => p.interest_level === interestFilter);
+      : prospects.filter((p) => p.interestLevel === interestFilter);
 
   const columnSlug = status.replace(/\s+/g, "-").toLowerCase();
 
