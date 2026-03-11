@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Prospect } from "@shared/schema";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Trash2, Pencil, Flame, ThumbsUp, Minus } from "lucide-react";
+import { ExternalLink, Trash2, Pencil, Flame, ThumbsUp } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -24,16 +24,15 @@ function InterestIndicator({ level }: { level: string }) {
       );
     case "Medium":
       return (
-        <span className="inline-flex items-center gap-1 text-xs font-medium text-amber-500 dark:text-amber-400" data-testid="interest-medium">
+        <span className="inline-flex items-center gap-1 text-xs font-medium text-orange-500" data-testid="interest-medium">
           <ThumbsUp className="w-3 h-3" />
           Medium
         </span>
       );
     case "Low":
       return (
-        <span className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground" data-testid="interest-low">
-          <Minus className="w-3 h-3" />
-          Low
+        <span className="inline-flex items-center gap-1 text-xs font-medium text-yellow-500" data-testid="interest-low">
+          ❓ Low
         </span>
       );
     default:

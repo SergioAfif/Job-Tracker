@@ -25,6 +25,12 @@ import {
 } from "@/components/ui/select";
 import { Loader2 } from "lucide-react";
 
+const INTEREST_LEVEL_LABELS: Record<string, string> = {
+  High: "🔥 High",
+  Medium: "👍 Medium",
+  Low: "❓ Low",
+};
+
 export function AddProspectForm({ onSuccess }: { onSuccess?: () => void }) {
   const { toast } = useToast();
 
@@ -146,7 +152,7 @@ export function AddProspectForm({ onSuccess }: { onSuccess?: () => void }) {
                   <SelectContent>
                     {INTEREST_LEVELS.map((level) => (
                       <SelectItem key={level} value={level} data-testid={`option-interest-${level}`}>
-                        {level}
+                        {INTEREST_LEVEL_LABELS[level] ?? level}
                       </SelectItem>
                     ))}
                   </SelectContent>
