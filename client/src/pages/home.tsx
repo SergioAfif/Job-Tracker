@@ -101,7 +101,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-lg font-semibold tracking-tight leading-tight" data-testid="text-app-title">
-                  JobTrackr
+                  JobTrackerPro
                 </h1>
                 <p className="text-xs text-muted-foreground" data-testid="text-prospect-count">
                   {totalCount} prospect{totalCount !== 1 ? "s" : ""} tracked

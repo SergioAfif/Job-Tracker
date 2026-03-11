@@ -1,4 +1,4 @@
-# JobTrackr
+# JobTrackerPro
 
 A Kanban-style job search tracker built with React, Express, and PostgreSQL. Prospects are organized into columns by pipeline status and can be created, edited, and deleted through a clean card-based interface.
 
