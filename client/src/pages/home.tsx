@@ -24,10 +24,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
 
 const INTEREST_FILTERS = [
-  { value: "All", label: "All" },
-  { value: "High", label: "🔥 High" },
-  { value: "Medium", label: "👍 Medium" },
-  { value: "Low", label: "🤷 Low" },
+  { value: "All", label: "All", color: "" },
+  { value: "High", label: "🔥 High", color: "text-red-500" },
+  { value: "Medium", label: "👍 Medium", color: "text-orange-500" },
+  { value: "Low", label: "❓ Low", color: "text-yellow-500" },
 ] as const;
 
 type InterestFilter = (typeof INTEREST_FILTERS)[number]["value"];
@@ -90,7 +90,7 @@ function KanbanColumn({
           </SelectTrigger>
           <SelectContent>
             {INTEREST_FILTERS.map((f) => (
-              <SelectItem key={f.value} value={f.value} className="text-xs">
+              <SelectItem key={f.value} value={f.value} className={`text-xs ${f.color}`}>
                 {f.label}
               </SelectItem>
             ))}

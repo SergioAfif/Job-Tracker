@@ -24,14 +24,14 @@ function InterestIndicator({ level }: { level: string }) {
       );
     case "Medium":
       return (
-        <span className="inline-flex items-center gap-1 text-xs font-medium text-amber-500 dark:text-amber-400" data-testid="interest-medium">
+        <span className="inline-flex items-center gap-1 text-xs font-medium text-orange-500" data-testid="interest-medium">
           <ThumbsUp className="w-3 h-3" />
           Medium
         </span>
       );
     case "Low":
       return (
-        <span className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground" data-testid="interest-low">
+        <span className="inline-flex items-center gap-1 text-xs font-medium text-yellow-500" data-testid="interest-low">
           <Minus className="w-3 h-3" />
           Low
         </span>
